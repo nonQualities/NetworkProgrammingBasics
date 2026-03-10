@@ -1,2 +1,9 @@
-*.out/
-*.o/
+
+# Ignore all executables in bin folder
+bin/*
+# Create a global gitignore
+git config --global core.excludesfile ~/.gitignore_global
+
+# Add patterns in ~/.gitignore_global
+*.out
+*.bin
