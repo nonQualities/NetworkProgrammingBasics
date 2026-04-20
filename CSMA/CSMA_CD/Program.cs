@@ -7,7 +7,7 @@ namespace CSMASimulation
         static void Main(string[] args)
         {
 
-            int numberOfNodes = 3;
+            int numberOfNodes = 20;
             int totalTicksToSimulate = 200;
 
             SimulationManager manager = new(numberOfNodes, totalTicksToSimulate);

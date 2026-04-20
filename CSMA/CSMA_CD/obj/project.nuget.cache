@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "KkWvofdUpBw=",
+  "dgSpecHash": "Qm+C6qTEzvI=",
   "success": true,
   "projectFilePath": "/home/non_qualities/Programming/Networking/CSMA/CSMA_CD/CSMA_CD.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/home/non_qualities/.nuget/packages/mathnet.numerics/5.0.0/mathnet.numerics.5.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

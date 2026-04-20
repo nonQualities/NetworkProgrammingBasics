@@ -23,31 +23,73 @@ public class SimulationManager
         Console.CursorVisible = false;
         Console.Clear();
         DrawStaticUI();
+        Console.WriteLine($@"Choose one of the options below :
+                                1. 1 Persistent CSMA
+                                2. p Persistent CSMA ");
 
-   
-        while (_currentTick < _maxTicks)
+        
+        int choice = Console.Read();
+
+
+
+        switch (choice)
         {
-            _medium.PrepareForNewTick();
-
-            foreach (var node in _nodes)
-            {
-                node.Tick(_medium.CurrentState);
-                if (node.State == NodeState.Transmitting)
+            case '1':
                 {
-                    _medium.RegisterTransmission();
+                    while (_currentTick < _maxTicks)
+                    {
+                        _medium.PrepareForNewTick();
+
+                        foreach (var node in _nodes)
+                        {
+                            node.OnePersistentTick(_medium.CurrentState);
+                            if (node.State == NodeState.Transmitting)
+                            {
+                                _medium.RegisterTransmission();
+                            }
+                        }
+
+                        
+                            _medium.ResolveState();
+                            RenderDynamicUI();
+                            _currentTick++;
+                            Thread.Sleep(300); 
+                    }
+
+                    Console.SetCursorPosition(0, _nodes.Count + 10);
+                    Console.WriteLine("\nSimulation Complete. Press any key to exit.");
+                    Console.ReadKey();
+                    break;
                 }
-            }
+            case '2':
+                {
+                    while (_currentTick < _maxTicks)
+                    {
+                        _medium.PrepareForNewTick();
 
-           
-            _medium.ResolveState();
-            RenderDynamicUI();
-            _currentTick++;
-            Thread.Sleep(300); 
+                        foreach (var node in _nodes)
+                        {
+                            node.PPersistentTick(_medium.CurrentState);
+                            if (node.State == NodeState.Transmitting)
+                            {
+                                _medium.RegisterTransmission();
+                            }
+                        }
+
+                    
+                        _medium.ResolveState();
+                        RenderDynamicUI();
+                        _currentTick++;
+                        Thread.Sleep(300); 
+                    }
+
+                    Console.SetCursorPosition(0, _nodes.Count + 10);
+                    Console.WriteLine("\nSimulation Complete. Press any key to exit.");
+                    Console.ReadKey();
+                    break;
+                }
+             
         }
-
-        Console.SetCursorPosition(0, _nodes.Count + 10);
-        Console.WriteLine("\nSimulation Complete. Press any key to exit.");
-        Console.ReadKey();
     }
 
     private void DrawStaticUI()
