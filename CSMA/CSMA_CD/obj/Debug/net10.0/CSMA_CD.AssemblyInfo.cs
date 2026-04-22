@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CSMA_CD")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8bf51398f45179110196d79f6f3b078117b17c4b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1e2f6db8250ddd0b0021e4dc24051aaa09b96667")]
 [assembly: System.Reflection.AssemblyProductAttribute("CSMA_CD")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CSMA_CD")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
