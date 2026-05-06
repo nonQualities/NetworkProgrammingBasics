@@ -30,6 +30,8 @@ public class SimulationManager
         
         int choice = Console.Read();
 
+        Console.WriteLine("\n \n \n");
+
 
 
         switch (choice)
@@ -53,7 +55,7 @@ public class SimulationManager
                             _medium.ResolveState();
                             RenderDynamicUI();
                             _currentTick++;
-                            Thread.Sleep(300); 
+                            Thread.Sleep(20); 
                     }
 
                     Console.SetCursorPosition(0, _nodes.Count + 10);
