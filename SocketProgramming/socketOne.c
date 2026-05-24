@@ -13,8 +13,7 @@ int main(){
     if(connection_stts<0){
         perror("Connection Failed!!\n");
         return -1;
-    }else{
-        printf("Connection Successful!\n"); }
+    }else{printf("Connection Successful!\n"); }
     
     char* message = NULL;
     size_t message_size = 0;

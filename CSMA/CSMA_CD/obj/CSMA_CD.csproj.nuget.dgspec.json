@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/non_qualities/Programming/Networking/CSMA/CSMA_CD/CSMA_CD.csproj": {}
+    "/mnt/fedora_disk2/Programming/Networking/CSMA/CSMA_CD/CSMA_CD.csproj": {}
   },
   "projects": {
-    "/home/non_qualities/Programming/Networking/CSMA/CSMA_CD/CSMA_CD.csproj": {
+    "/mnt/fedora_disk2/Programming/Networking/CSMA/CSMA_CD/CSMA_CD.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/non_qualities/Programming/Networking/CSMA/CSMA_CD/CSMA_CD.csproj",
+        "projectUniqueName": "/mnt/fedora_disk2/Programming/Networking/CSMA/CSMA_CD/CSMA_CD.csproj",
         "projectName": "CSMA_CD",
-        "projectPath": "/home/non_qualities/Programming/Networking/CSMA/CSMA_CD/CSMA_CD.csproj",
+        "projectPath": "/mnt/fedora_disk2/Programming/Networking/CSMA/CSMA_CD/CSMA_CD.csproj",
         "packagesPath": "/home/non_qualities/.nuget/packages/",
-        "outputPath": "/home/non_qualities/Programming/Networking/CSMA/CSMA_CD/obj/",
+        "outputPath": "/mnt/fedora_disk2/Programming/Networking/CSMA/CSMA_CD/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/non_qualities/.nuget/NuGet/NuGet.Config"
@@ -66,7 +66,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/lib64/dotnet/sdk/10.0.106/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "/usr/lib64/dotnet/sdk/10.0.107/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",

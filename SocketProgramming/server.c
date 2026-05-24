@@ -5,8 +5,10 @@
 
 
 int main(){
+
     unsigned PORT = 49153;
     char *ip = "0.0.0.0";
+    
     struct sockaddr_in address;
     int socket_client = create_socketIPTCP(ip, &address, PORT);
     if(bind(socket_client, (struct sockaddr *)&address, sizeof(address))<0){

@@ -1,20 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "iIw3wgT80f4=",
+  "dgSpecHash": "3cDFQeHU1vc=",
   "success": true,
-  "projectFilePath": "/home/non_qualities/Programming/Networking/CSMA/CSMA_CD/CSMA_CD.csproj",
+  "projectFilePath": "/mnt/fedora_disk2/Programming/Networking/CSMA/CSMA_CD/CSMA_CD.csproj",
   "expectedPackageFiles": [
     "/home/non_qualities/.nuget/packages/mathnet.numerics/5.0.0/mathnet.numerics.5.0.0.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "NU1900",
-      "level": "Warning",
-      "message": "Error occurred while getting package vulnerability data: Unable to load the service index for source https://api.nuget.org/v3/index.json.",
-      "projectPath": "/home/non_qualities/Programming/Networking/CSMA/CSMA_CD/CSMA_CD.csproj",
-      "warningLevel": 1,
-      "filePath": "/home/non_qualities/Programming/Networking/CSMA/CSMA_CD/CSMA_CD.csproj",
-      "targetGraphs": []
-    }
-  ]
+  "logs": []
 }
