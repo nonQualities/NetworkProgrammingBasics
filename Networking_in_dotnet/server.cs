@@ -19,16 +19,19 @@ class Server
         Console.WriteLine("Server is Listening...");
 
 
-
+        //using statement(differs from using directive) is used to dispose objects that are no longer needed
+        // it implements the IDisposable interface
+        // it is syntactic for the try-finally block
+        // It disposes after the end of enclosing scope
         using Socket handler = await server.AcceptAsync();
-        Console.WriteLine("Server Connected to {iPEndPoint}");
+        Console.WriteLine($"Server Connected to {iPEndPoint}");
 
         while (true)
         {
             var buffer = new byte[1_024];
             var recieved = await handler.ReceiveAsync(buffer, SocketFlags.None);
             var response = Encoding.UTF8.GetString(buffer, 0, recieved);
-            const byte eom = "<|EOM|>";
+            const string eom = "<|EOM|>";
 
             if (response.IndexOf(eom) > -1)
             {
@@ -38,14 +41,19 @@ class Server
 
                 var ackMessage = "<|ACK|>";
                 var echoBytes = Encoding.UTF8.GetBytes(ackMessage);
-                await handler.SendAsync(echoBytes, 0);
-                Console.WriteLine(
-                    $"Socket server sent acknowledgment: \"{ackMessage}\"");
-        
-                break;
+                if (recieved = -1)
+                {
+                    await handler.SendAsync(echoBytes, 0);
+                    Console.WriteLine(
+                        $"Socket server sent acknowledgment: \"{ackMessage}\"");
+
+                    break;
+                }
             }
 
         }
 
+        server.Shutdown(SocketShutdown.Both);
+        server.Close();
     }
 }

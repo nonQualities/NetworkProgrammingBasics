@@ -25,6 +25,11 @@ public class Client
         //there are some extra baggage when sending message but it makes it safer
         // Like encoding it to UTF-8
 
+        /*
+        * this is the socket constructor: it has many overloads ofc, but this is the main one.
+        * another one is Socket(SocketHandle);
+        * A socket handle is the refernce to the socket object
+        */
         using Socket Client = new(
             iPEndPoint.AddressFamily,
             SocketType.Stream,
@@ -47,7 +52,7 @@ public class Client
 
             var received = await Client.ReceiveAsync(buffer, SocketFlags.None);
             var response = Encoding.UTF8.GetString(buffer, 0, received);
-            
+
             if (response == "<|ACK|>")
             {
                 Console.WriteLine(
@@ -60,5 +65,8 @@ public class Client
 
 
         }
+
+        Client.Shutdown(SocketShutdown.Both);
+        Client.Close();
     }
 }

@@ -1,0 +1,12 @@
+[x] Review the existing TCP client-server code
+    Document the connection lifecycle, read/write loops, cancellation and shutdown.
+[ ] Build a robust TCP echo server
+    Handle concurrent clients, partial reads, EOF and exceptions.
+[ ] Build a UDP echo server
+    Compare datagram boundaries and failure behavior with TCP.
+[ ] Capture a complete TCP session in Wireshark
+    Identify SYN, SYN-ACK, ACK, data, acknowledgements and FIN/RST.
+[ ] Break the implementation deliberately
+    Test slow clients, large messages, fragmented writes, disconnects and invalid input.
+[ ] Write a technical postmortem
+    Explain the failures you observed and the changes needed to handle them.
